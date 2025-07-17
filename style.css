@@ -9,3 +9,8 @@
     .uch-ntk-popup-inner img {
     width: 170px;
 }
+
+.uch-ntk-text-btn {
+    align-items: center;
+    flex-flow: column;
+}
