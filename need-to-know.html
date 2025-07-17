@@ -71,6 +71,8 @@
 </body>
 </html>
  <script>
+   const btns = document.querySelectorAll('.uch-ntk-btn-toggle');
+   
     document.addEventListener("DOMContentLoaded", () => {
       const buttons = document.querySelectorAll('.uch-ntk-btn-toggle');
       const boxes = document.querySelectorAll('.uch-ntk-text-btn');
@@ -88,7 +90,7 @@
     });
 
 
-   const firstBtn = buttons[0];
+   const firstBtn = btns[0];
    const rediBtn = document.querySelector('.uch-ntk-btn-redirect');
     const ifr = document.querySelector('.uch-ntk-ifr');
 
