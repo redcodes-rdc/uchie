@@ -6,6 +6,8 @@
 .uch-ntk-text {
   margin-block: 20px 30px;
   text-align: center;
+  padding-inline: 20px;
+  line-height: 1.2;
 }
 .uch-ntk-text-btn.rdc-active {
   display: flex;
