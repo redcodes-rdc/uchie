@@ -96,10 +96,9 @@
 
     const updateHref = function () {
       console.log(ifr)
-      const cartData = ifr.dataset.cart;
+      const cartData = ifr.src.split('?')[1].split('=')[1];
       rediBtn.href = `https://www.uchie.com/cart/${cartData}`
     }
 
-    
     firstBtn.addEventListener('click',updateHref);
-  </script>
+</script>
