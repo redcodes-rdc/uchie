@@ -4,12 +4,12 @@
   display: none;
 }
 .uch-ntk-text {
-  margin-block: 20px 30px;
+  margin-block: 20px;
   text-align: center;
   padding-inline: 20px;
 }
 .uch-ntk-text p {
-  line-height: 1.4;
+  line-height: 1.8;
 }
 .uch-ntk-text-btn.rdc-active {
   display: flex;
