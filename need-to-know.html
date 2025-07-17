@@ -45,7 +45,7 @@
         <p>One of our core plant-based ingredients is Kratom. This plant has been traditionally used as an energy booster and mood enhancer in its native regions.</p>
       </div>
       <div class="uch-ntk-buttons">
-        <a class="uch-ntk-btn-primary uch-ntk-btn-redirect" data-target="ntk-1" href="#">Understood</a>
+        <a class="uch-ntk-btn-primary uch-ntk-btn-redirect" data-target="ntk-1" href="https://www.uchie.com/cart/">Understood</a>
         <a class="uch-ntk-btn-secondary" href="">Wait, what?</a>
       </div>
     </div>
@@ -81,7 +81,7 @@ const cartParam = params.get('cart');
 
     const updateHref = function () {
       const cartData = cartParam;
-      rediBtn.href = `https://www.uchie.com/cart/${cartData}`
+      rediBtn.href = `${rediBtn.href}${cartData}`
     }
 
     firstBtn.addEventListener('click',updateHref);
