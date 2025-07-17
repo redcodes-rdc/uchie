@@ -20,19 +20,20 @@
     flex-flow: column;
 }
 
-button.uch-ntk-btn-primary,
-button.uch-ntk-btn-secondary {
+.uch-ntk-btn-primary,
+.uch-ntk-btn-secondary {
   padding: 10px 20px;
     border-radius: 100px;
-    border: unset;
-   
+    
 }
 
-button.uch-ntk-btn-primary {
+.uch-ntk-btn-primary {
     background-color: #FF8A00;
      color: #fff;
    margin-right: 20px;
+  border: unset;
 }
-button.uch-ntk-btn-secondary {
+.uch-ntk-btn-secondary {
   border: 1px solid #000;
+  text-decoration: none;
 }
