@@ -11,7 +11,7 @@
   
 </head>
 <body>
-  <div class="uch-ntk-popup-inner">
+    <div class="uch-ntk-popup-inner">
     <!-- Logo -->
     <div class="uch-ntk-logo">
       <img src="https://www.drinkuchie.com/cdn/shop/files/image_1_2.png?v=1752579920&width=340">
@@ -23,7 +23,7 @@
         <p>This product is for adult use only – are you 21+?</p>
       </div>
       <div class="uch-ntk-buttons">
-        <button class="uch-ntk-btn-primary" data-target="ntk-2">Yes, I am 21+</button>
+        <button class="uch-ntk-btn-primary uch-ntk-btn-toggle" data-target="ntk-2">Yes, I am 21+</button>
         <a class="uch-ntk-btn-secondary" href="">No, I'm under 21</a>
       </div>
     </div>
@@ -34,7 +34,7 @@
         <p>New Brew is a social tonic designed to elevate your mood and your moments. It's made from ancient plants with effects you can actually feel.</p>
       </div>
       <div class="uch-ntk-buttons">
-        <button class="uch-ntk-btn-primary" data-target="ntk-3">Sounds good</button>
+        <button class="uch-ntk-btn-primary uch-ntk-btn-toggle" data-target="ntk-3">Sounds good</button>
         <a class="uch-ntk-btn-secondary" href="">Tell me more</a>
       </div>
     </div>
@@ -45,7 +45,7 @@
         <p>One of our core plant-based ingredients is Kratom. This plant has been traditionally used as an energy booster and mood enhancer in its native regions.</p>
       </div>
       <div class="uch-ntk-buttons">
-        <button class="uch-ntk-btn-primary" data-target="ntk-1">Understood</button>
+        <a class="uch-ntk-btn-primary uch-ntk-btn-redirect" data-target="ntk-1" href="#">Understood</a>
         <a class="uch-ntk-btn-secondary" href="">Wait, what?</a>
       </div>
     </div>
@@ -70,3 +70,33 @@
   </script>
 </body>
 </html>
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll('.uch-ntk-btn-toggle');
+      const boxes = document.querySelectorAll('.uch-ntk-text-btn');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.dataset.target;
+          boxes.forEach(box => {
+            box.classList.remove('rdc-active');
+          });
+          const nextBox = document.querySelector(`.${target}`);
+          if (nextBox) nextBox.classList.add('rdc-active');
+        });
+      });
+    });
+
+
+   const firstBtn = buttons[0];
+   const rediBtn = document.querySelector('.uch-ntk-btn-redirect');
+    const ifr = document.querySelector('.uch-ntk-ifr');
+
+    const updateHref = function () {
+      const cartData = ifr.dataset.cart;
+      rediBtn.href = `https://www.uchie.com/cart/${cartData}`
+    }
+
+    
+    firstBtn.eventListener('click',updateHref);
+  </script>
