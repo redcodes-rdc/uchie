@@ -95,6 +95,7 @@
     const ifr = document.querySelector('.uch-ntk-ifr');
 
     const updateHref = function () {
+      console.log(ifr)
       const cartData = ifr.dataset.cart;
       rediBtn.href = `https://www.uchie.com/cart/${cartData}`
     }
