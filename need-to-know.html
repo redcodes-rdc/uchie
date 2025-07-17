@@ -51,23 +51,6 @@
     </div>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const buttons = document.querySelectorAll('.uch-ntk-btn-primary');
-      const boxes = document.querySelectorAll('.uch-ntk-text-btn');
-
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const target = btn.dataset.target;
-          boxes.forEach(box => {
-            box.classList.remove('rdc-active');
-          });
-          const nextBox = document.querySelector(`.${target}`);
-          if (nextBox) nextBox.classList.add('rdc-active');
-        });
-      });
-    });
-  </script>
 </body>
 </html>
  <script>
@@ -97,7 +80,6 @@
 const cartParam = params.get('cart');
 
     const updateHref = function () {
-      console.log(cartParam)
       const cartData = cartParam;
       rediBtn.href = `https://www.uchie.com/cart/${cartData}`
     }
