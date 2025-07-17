@@ -92,11 +92,13 @@
 
    const firstBtn = btns[0];
    const rediBtn = document.querySelector('.uch-ntk-btn-redirect');
-    const ifr = document.querySelector('.uch-ntk-ifr');
+    // const ifr = document.querySelector('.uch-ntk-ifr');
+   const params = new URLSearchParams(window.location.search);
+const cartParam = params.get('cart');
 
     const updateHref = function () {
       console.log(ifr)
-      const cartData = ifr.src.split('?')[1].split('=')[1];
+      const cartData = cartParam.split('?')[1].split('=')[1];
       rediBtn.href = `https://www.uchie.com/cart/${cartData}`
     }
 
