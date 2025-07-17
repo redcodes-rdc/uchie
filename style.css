@@ -33,6 +33,7 @@
      color: #fff;
    margin-right: 20px;
   border: unset;
+  cursor: pointer;
 }
 .uch-ntk-btn-secondary {
   border: 1px solid #000;
