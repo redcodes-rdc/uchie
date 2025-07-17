@@ -3,6 +3,9 @@
 .uch-ntk-text-btn {
   display: none;
 }
+.uch-ntk-text {
+  margin-block: 20px;
+}
 .uch-ntk-text-btn.rdc-active {
   display: flex;
 }
@@ -30,5 +33,5 @@ button.uch-ntk-btn-primary {
      color: #fff;
 }
 button.uch-ntk-btn-secondary {
-  outline: 1px solid;
+  border: 1px solid #000;
 }
