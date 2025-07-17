@@ -31,6 +31,7 @@ button.uch-ntk-btn-secondary {
 button.uch-ntk-btn-primary {
     background-color: #FF8A00;
      color: #fff;
+   margin-right: 20px;
 }
 button.uch-ntk-btn-secondary {
   border: 1px solid #000;
