@@ -63,3 +63,49 @@
 </head>
 </body>
 </html>
+
+<script>
+  /** Universal Toggler for Drawers, Accordions, etc. **/
+class ClassToggler {
+  constructor(triggerSelector, targetsSelector, className = 'rdc-active') {
+    this.triggers = document.querySelectorAll(`.${triggerSelector}`);
+    this.targets = document.querySelectorAll(`.${targetsSelector}`);
+    this.className = className;
+    this.init();
+  }
+
+  init() {
+    this.triggers.forEach(trigger => {
+      const targetSelector = trigger.getAttribute('data-target');
+      const target = document.querySelector(`.${targetSelector}`);
+
+      if (target) {
+        trigger.addEventListener('click', () => {
+          const isActive = target.classList.contains(this.className);
+
+          // If multiple triggers (e.g. accordion), close all first
+          if (this.triggers.length > 1) {
+            this.targets.forEach(t => t.classList.remove(this.className));
+            this.triggers.forEach(t => t.classList.remove(this.className));
+          }
+
+          
+          if(target.classList.contains('rdc-toggle')) {
+            target.classList.add(this.className);
+            trigger.classList.add('rdc-active');
+          } else {
+            // If target wasn't active, activate it (otherwise leave it closed)
+          if (!isActive) {
+            target.classList.add(this.className);
+          }
+          }
+          
+        });
+      }
+    });
+  }
+}
+if(document.querySelector('.uch-ntk-btn-primary')) {
+  new ClassToggler('uch-ntk-btn-primary','uch-ntk-text-btn','rdc-active');
+}
+</script>
