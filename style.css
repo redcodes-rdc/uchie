@@ -24,6 +24,7 @@
 .uch-ntk-btn-secondary {
   padding: 10px 20px;
     border-radius: 100px;
+  font-size: 16px;
     
 }
 
@@ -36,4 +37,5 @@
 .uch-ntk-btn-secondary {
   border: 1px solid #000;
   text-decoration: none;
+  color: #000;
 }
