@@ -98,7 +98,7 @@ const cartParam = params.get('cart');
 
     const updateHref = function () {
       console.log(cartParam)
-      const cartData = cartParam.split('?')[1].split('=')[1];
+      const cartData = cartParam.searchParams.get("cart");
       rediBtn.href = `https://www.uchie.com/cart/${cartData}`
     }
 
