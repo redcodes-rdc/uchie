@@ -16,3 +16,19 @@
     align-items: center;
     flex-flow: column;
 }
+
+button.uch-ntk-btn-primary,
+button.uch-ntk-btn-secondary {
+  padding: 10px 20px;
+    border-radius: 100px;
+    border: unset;
+   
+}
+
+button.uch-ntk-btn-primary {
+    background-color: #FF8A00;
+     color: #fff;
+}
+button.uch-ntk-btn-secondary {
+  outline: 1px solid;
+}
