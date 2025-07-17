@@ -1,0 +1,9 @@
+.uch-ntk-text-btn {
+  display: none;
+}
+.uch-ntk-text-btn.rdc-active {
+  display: flex;
+}
+    .uch-ntk-popup-inner img {
+    width: 170px;
+}
