@@ -6,77 +6,74 @@
   <title>Need to Know</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  
-<body>
-<div class="uch-ntk-popup-inner">
-  <!-- Logo -->
-  <div class="uch-ntk-logo">
-    <!-- You can use Shopify image setting later -->
-    <img src="https://www.drinkuchie.com/cdn/shop/files/image_1_2.png?v=1752579920&width=340">
-  </div>
-
-   <div class="uch-ntk-text-btn ntk-1 rdc-active rdc-toggle" data-pos='ntk-1'>
-  <!-- Text content -->
-  <div class="uch-ntk-text">
-    <p>This product is for adult use only – are you 21+?</p>
-  </div>
-
-  <!-- Buttons -->
-  <div class="uch-ntk-buttons">
-    <button class="uch-ntk-btn-primary" data-target="ntk-1">Yes, I am 21+</button>
-    <a class="uch-ntk-btn-secondary" href="">No, I'm under 21</a>
-  </div>
-     </div>
-
-  <div class="uch-ntk-text-btn ntk-2 rdc-toggle" data-pos='ntk-2'>
-  <!-- Text content -->
-  <div class="uch-ntk-text">
-    <p>New Brew is a social tonic designed to elevate your mood and your moments. It's made from ancient plants with effects you can actually feel.</p>
-  </div>
-
-  <!-- Buttons -->
-  <div class="uch-ntk-buttons">
-    <button class="uch-ntk-btn-primary" data-target="ntk-2">Sounds good</button>
-    <a class="uch-ntk-btn-secondary" href="">Tell me more</a>
-  </div>
-     </div>
-
-  <div class="uch-ntk-text-btn ntk-3 rdc-toggle" data-pos='ntk-3'>
-  <!-- Text content -->
-  <div class="uch-ntk-text">
-    <p>One of our core plant-based ingredients is Kratom. This plant has been traditionally used as an energy booster and mood enhancer in its native regions.</p>
-  </div>
-
-  <!-- Buttons -->
-  <div class="uch-ntk-buttons">
-    <button class="uch-ntk-btn-primary" data-target="ntk-3">Understood</button>
-    <a class="uch-ntk-btn-secondary" href="">Wait, what?</a>
-  </div>
-     </div>
-  
-</div>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+    .uch-ntk-text-btn {
+      display: none;
+    }
+    .uch-ntk-text-btn.rdc-active {
+      display: block;
+    }
+  </style>
 </head>
-</body>
-</html>
+<body>
+  <div class="uch-ntk-popup-inner">
+    <!-- Logo -->
+    <div class="uch-ntk-logo">
+      <img src="https://www.drinkuchie.com/cdn/shop/files/image_1_2.png?v=1752579920&width=340">
+    </div>
 
-<script>
-  /** Universal Toggler for Drawers, Accordions, etc. **/
-document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll('.uch-ntk-btn-primary');
-    const boxes = document.querySelectorAll('.uch-ntk-text-btn');
+    <!-- Step 1 -->
+    <div class="uch-ntk-text-btn ntk-1 rdc-active rdc-toggle" data-pos='ntk-1'>
+      <div class="uch-ntk-text">
+        <p>This product is for adult use only – are you 21+?</p>
+      </div>
+      <div class="uch-ntk-buttons">
+        <button class="uch-ntk-btn-primary" data-target="ntk-2">Yes, I am 21+</button>
+        <a class="uch-ntk-btn-secondary" href="">No, I'm under 21</a>
+      </div>
+    </div>
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = btn.dataset.target;
-        boxes.forEach(box => {
-          box.classList.remove('rdc-active');
+    <!-- Step 2 -->
+    <div class="uch-ntk-text-btn ntk-2 rdc-toggle" data-pos='ntk-2'>
+      <div class="uch-ntk-text">
+        <p>New Brew is a social tonic designed to elevate your mood and your moments. It's made from ancient plants with effects you can actually feel.</p>
+      </div>
+      <div class="uch-ntk-buttons">
+        <button class="uch-ntk-btn-primary" data-target="ntk-3">Sounds good</button>
+        <a class="uch-ntk-btn-secondary" href="">Tell me more</a>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="uch-ntk-text-btn ntk-3 rdc-toggle" data-pos='ntk-3'>
+      <div class="uch-ntk-text">
+        <p>One of our core plant-based ingredients is Kratom. This plant has been traditionally used as an energy booster and mood enhancer in its native regions.</p>
+      </div>
+      <div class="uch-ntk-buttons">
+        <button class="uch-ntk-btn-primary" data-target="ntk-1">Understood</button>
+        <a class="uch-ntk-btn-secondary" href="">Wait, what?</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll('.uch-ntk-btn-primary');
+      const boxes = document.querySelectorAll('.uch-ntk-text-btn');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.dataset.target;
+          boxes.forEach(box => {
+            box.classList.remove('rdc-active');
+          });
+          const nextBox = document.querySelector(`.${target}`);
+          if (nextBox) nextBox.classList.add('rdc-active');
         });
-        const nextBox = document.querySelector(`.${target}`);
-        if (nextBox) nextBox.classList.add('rdc-active');
       });
     });
-  });
-
-</script>
+  </script>
+</body>
+</html>
