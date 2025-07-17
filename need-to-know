@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Need to Know</title>
+<body>
+<div class="uch-ntk-popup-inner">
+  <!-- Logo -->
+  <div class="uch-ntk-logo">
+    <!-- You can use Shopify image setting later -->
+    <img src="{{ 'logo.png' | asset_url }}" alt="Logo">
+  </div>
+
+  <!-- Text content -->
+  <div class="uch-ntk-text">
+    <p>This is the popup message text. You can make this dynamic later.</p>
+  </div>
+
+  <!-- Buttons -->
+  <div class="uch-ntk-buttons">
+    <button class="uch-ntk-btn-primary">Primary Action</button>
+    <a class="uch-ntk-btn-secondary" href="">Secondary Action</a>
+  </div>
+</div>
+</head>
+</body>
+</html>
