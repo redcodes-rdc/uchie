@@ -45,7 +45,7 @@
   color: #000;
 }
 .uch-disclaimer-text {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .rdc-disabled {
@@ -58,8 +58,11 @@
     padding-inline: 40px;
     padding-bottom: 20px;
   margin-top: -20px;
+  margin-bottom: 20px;
 }
 input#disclaimer {
     margin-right: 10px;
     margin-top: 0;
 }
+
+
