@@ -89,4 +89,12 @@ const cartParam = params.get('cart');
     }
 
     firstBtn.addEventListener('click',updateHref);
+
+    const discCheckBox = document.querySelector('.uch-ntk-disc input');
+
+   const updateLastBtn = function () {
+     rediBtn.classList.toggle('rdc-disabled');
+   }
+
+   discCheckBox.addEventListener('change',updateLastBtn);
 </script>
