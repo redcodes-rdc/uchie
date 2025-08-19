@@ -59,6 +59,8 @@
 </html>
  <script>
    const btns = document.querySelectorAll('.uch-ntk-btn-toggle');
+   const uchLogo = document.querySelector('.uch-ntk-logo');
+   
    
     document.addEventListener("DOMContentLoaded", () => {
       const buttons = document.querySelectorAll('.uch-ntk-btn-toggle');
@@ -69,6 +71,8 @@
           const target = btn.dataset.target;
           boxes.forEach(box => {
             box.classList.remove('rdc-active');
+
+            if(target=='ntk-3') uchLogo.classList.add('rdc-d-none');
           });
           const nextBox = document.querySelector(`.${target}`);
           if (nextBox) nextBox.classList.add('rdc-active');
