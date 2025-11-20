@@ -90,6 +90,7 @@ const cartParam = params.get('cart');
     const updateHref = function () {
       const cartData = cartParam.replace("=",":");
       rediBtn.href = `https://www.uchie.com/cart/${cartData}`
+      console.log(cartData)
     }
 
     firstBtn.addEventListener('click',updateHref);
