@@ -70,4 +70,10 @@ input#disclaimer {
 .uch-ntk-disc {
   padding-inline: 20px;
 }
+  .uch-ntk-popup-inner {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
 }
